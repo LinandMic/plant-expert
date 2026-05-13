@@ -86,7 +86,7 @@ async function analyzeWithClaude(imageBase64, plantName) {
 
   messages.push({ role: "user", content });
 
-  const response = await fetch("https://api.anthropic.com/v1/messages", {
+  const response = await fetch("/api/proxy", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
